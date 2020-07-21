@@ -63,7 +63,7 @@ mysql -h127.0.0.1 -uroot -P3308 -p'Wzy@123.com'
 mysql5.7重置密码
 ```none
 # grep skip  /etc/my.cnf         
-#skip_grant_tabless
+skip_grant_tabless
 # systemctl restart mysqld.service
 mysql> update mysql.user set authentication_string=password('s3usZT0YaKe7/CkZ+35LOC6K3gGM') where user='root' and host='localhost';  
 Query OK, 0 rows affected, 1 warning (0.00 sec)
