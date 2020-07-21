@@ -4,7 +4,7 @@ cat /etc/system-release
 CentOS Linux release 7.7.1908 (Core)
 ```
 安装软件
-```bash
+```
 rpm -ivh https://repo.mysql.com//mysql80-community-release-el7-3.noarch.rpm
 yum install yum-utils -y
 yum-config-manager --disable mysql80-community
