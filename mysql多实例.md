@@ -1,10 +1,10 @@
 环境
-```none
+```
 cat /etc/system-release
 CentOS Linux release 7.7.1908 (Core)
 ```
 安装软件
-```none
+```
 rpm -ivh https://repo.mysql.com//mysql80-community-release-el7-3.noarch.rpm
 yum install yum-utils -y
 yum-config-manager --disable mysql80-community
@@ -14,13 +14,13 @@ yum install mysql-community-server -y
 systemctl enable --now mysqld.service
 ```
 安装完成后必须修改密码
-```none
+```
 grep password /var/log/mysqld.log
 mysqladmin -uroot -p'b0sHKjSfRl?s' password 'Wzy@123.com'
 ```
 
 多实例
-```none
+```
 mkdir -p /mysqldir/{3307,3308}/data/
 
 cat > /mysqldir/3307/my.cnf <<EOF
@@ -61,7 +61,7 @@ mysql -h127.0.0.1 -uroot -P3307 -p'Wzy@123.com'
 mysql -h127.0.0.1 -uroot -P3308 -p'Wzy@123.com'
 ```
 mysql5.7重置密码
-```none
+```
 # grep skip  /etc/my.cnf         
 skip_grant_tabless
 # systemctl restart mysqld.service
