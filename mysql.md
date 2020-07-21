@@ -1,5 +1,3 @@
-下载地址 http://dl.mycat.org.cn/1.6.7.4/Mycat-server-1.6.7.4-release/Mycat-server-1.6.7.4-release-20200105164103-linux.tar.gz
-
 环境
 ```none
 cat /etc/system-release
